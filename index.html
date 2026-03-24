@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Raj Pandey - Full Stack Developer. I build scalable, efficient web applications focusing on clean code.">
+  <meta name="keywords" content="Raj Pandey, Full Stack Developer, Web Developer, React, Node.js, C++">
+  <meta property="og:title" content="Raj Pandey | Portfolio">
+  <meta property="og:description"
+    content="Full Stack Developer Portfolio showcasing projects in React, Node.js, and C++.">
+  <meta property="og:type" content="website">
+  <title>Raj Pandey | Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- CANVAS BACKGROUND -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo" data-text="Raj.">Raj.</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="images/cv.pdf" target="_blank" class="cv-nav-btn"><i class="fas fa-file-pdf"
+            style="margin-right: 5px;"></i>CV</a></li>
+      <li><button id="theme-toggle" class="theme-btn" title="Toggle Matrix Theme"><i class="fas fa-adjust"></i></button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="terminal-window">
+        <div class="terminal-header">
+          <div class="terminal-btn red"></div>
+          <div class="terminal-btn yellow"></div>
+          <div class="terminal-btn green"></div>
+          <div class="terminal-title">bash - raj@portfolio ~</div>
+          <div class="availability-status header-status">
+            <span class="pulse-dot"></span>
+            <span class="avail-text">Available for opportunities
+            </span>
+          </div>
+        </div>
+        <div class="terminal-body">
+          <p class="cmd"><span>$</span> <span id="hero-cmd"></span><span class="cmd-cursor">_</span></p>
+          <div id="hero-hidden-content" class="hero-hidden">
+            <p class="output">Loading developer profile...</p>
+            <br>
+            <h3>Hi, I'm</h3>
+            <h1>Raj Pandey</h1>
+            <h2 id="typing"></h2>
+
+            <p class="hero-desc">
+              I enjoy building scalable and efficient web applications, focusing on solving real-world problems with
+              clean
+              code.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="#projects" class="btn primary">View Projects</a>
+              <a href="images/cv.pdf" target="_blank" class="btn secondary">Download CV</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section hidden">
+    <div class="about-container">
+      <div class="about-text-content">
+        <h2 class="section-title">About <span>Me</span></h2>
+        <p class="about-text">
+          I am a passionate Full Stack Developer with a strong foundation in Data Structures and Algorithms. I enjoy
+          building scalable and efficient web applications using modern technologies. I am focused on solving real-world
+          problems with clean code and continuously improving my development skills.
+        </p>
+        <p class="about-text" style="margin-top: 15px;">
+          <strong>Career Objective:</strong> To become a skilled Full Stack Developer and work on impactful projects
+          that solve real-world problems while continuously learning and improving my technical abilities.
+        </p>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <h3><i class="fas fa-graduation-cap" style="color: #a855f7; margin-right: 8px;"></i> Education</h3>
+            <p><strong>Bachelor of Technology (B.Tech) in Computer Science</strong></p>
+            <p class="college-name">Lovely Professional University</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <h3><i class="fas fa-briefcase" style="color: #a855f7; margin-right: 8px;"></i> Experience</h3>
+            <p><strong>Full Stack Developer</strong></p>
+            <p class="college-name" style="color:#9ca3af !important;">Self-Taught & Freelance Projects</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Animated Visual Element -->
+      <div class="about-visual">
+        <div class="glass-card anim-card-1">
+          <i class="fas fa-code"></i>
+          <span>Clean Code</span>
+        </div>
+        <div class="glass-card anim-card-2">
+          <i class="fas fa-layer-group"></i>
+          <span>Full Stack</span>
+        </div>
+        <div class="glass-card anim-card-3">
+          <i class="fas fa-lightbulb"></i>
+          <span>Problem Solver</span>
+        </div>
+        <div class="glowing-orb"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section hidden">
+    <h2 class="section-title">My <span>Skills</span></h2>
+
+    <div class="skills-container">
+      <div class="skill-card">
+        <i class="fas fa-file-code skill-icon"></i>
+        <h3>Languages</h3>
+        <p>C++, JavaScript, Python</p>
+        <div class="skill-bar">
+          <div class="skill-level" data-level="90%"></div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <i class="fas fa-laptop-code skill-icon"></i>
+        <h3>Frontend</h3>
+        <p>HTML, CSS, React</p>
+        <div class="skill-bar">
+          <div class="skill-level" data-level="85%"></div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <i class="fas fa-server skill-icon"></i>
+        <h3>Backend</h3>
+        <p>Node.js, Express</p>
+        <div class="skill-bar">
+          <div class="skill-level" data-level="75%"></div>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <i class="fas fa-tools skill-icon"></i>
+        <h3>Tools</h3>
+        <p>Git, Firebase, Stripe</p>
+        <div class="skill-bar">
+          <div class="skill-level" data-level="80%"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section hidden">
+    <h2 class="section-title">My Recent <span>Works</span></h2>
+    <p class="section-subtitle">Here are a few projects I've worked on recently.</p>
+
+    <div class="project-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="c++">C++</button>
+      <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+      <button class="filter-btn" data-filter="python">Python / ML</button>
+    </div>
+
+    <div class="projects-container">
+
+      <!-- CARD 1 -->
+      <div class="project-card" data-category="c++">
+        <div class="project-image-wrapper">
+          <img src="images/project1.png" alt="Automated Question Paper Generator">
+          <div class="project-terminal-overlay">
+            <div class="term-header"><span class="term-btn red"></span><span class="term-btn yellow"></span><span
+                class="term-btn green"></span></div>
+            <div class="term-body"
+              data-stack="> Inspecting project...\n> Tech Stack:\n  - C++\n  - DSA\n  - File Handling"></div>
+          </div>
+        </div>
+        <h3>Automated Question Paper Generator</h3>
+        <p>
+          Built a system using C++ and DSA to generate optimized question papers based on difficulty levels and topics.
+        </p>
+
+        <div class="project-buttons">
+          <a href="https://github.com/rajpandey70/automated-question-paper-generator.git" target="_blank"><i
+              class="fab fa-github"></i> GitHub</a>
+          <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="project-card" data-category="fullstack">
+        <div class="project-image-wrapper">
+          <img src="images/project2.png" alt="Agro Smart">
+          <div class="project-terminal-overlay">
+            <div class="term-header"><span class="term-btn red"></span><span class="term-btn yellow"></span><span
+                class="term-btn green"></span></div>
+            <div class="term-body"
+              data-stack="> Inspecting project...\n> Tech Stack:\n  - React.js\n  - Node.js\n  - MongoDB\n  - REST APIs">
+            </div>
+          </div>
+        </div>
+        <h3>Agro Smart</h3>
+        <p>
+          Developed a full-stack web application for smart agriculture solutions, integrating APIs and authentication
+          features.
+        </p>
+
+        <div class="project-buttons">
+          <a href="https://github.com/rajpandey70/Agro-smart.git" target="_blank"><i class="fab fa-github"></i>
+            GitHub</a>
+          <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="project-card" data-category="python">
+        <div class="project-image-wrapper">
+          <img src="images/project3.png" alt="Sentiment Call Analyzer">
+          <div class="project-terminal-overlay">
+            <div class="term-header"><span class="term-btn red"></span><span class="term-btn yellow"></span><span
+                class="term-btn green"></span></div>
+            <div class="term-body"
+              data-stack="> Inspecting project...\n> Tech Stack:\n  - Python\n  - NLP\n  - ML Models\n  - Flask"></div>
+          </div>
+        </div>
+        <h3>Sentiment Call Analyzer</h3>
+        <p>
+          Analyzes call data using sentiment analysis techniques to classify user emotions and provide business
+          insights.
+        </p>
+
+        <div class="project-buttons">
+          <a href="https://github.com/rajpandey70/call-sentiment-analyser.git" target="_blank"><i
+              class="fab fa-github"></i> GitHub</a>
+          <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section hidden">
+    <h2 class="section-title">Get In <span>Touch</span></h2>
+    <p class="section-subtitle">Have a project in mind or want to connect? Send me a message.</p>
+
+    <div class="contact-container">
+
+      <div class="contact-info"
+        style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-bottom: 25px;">
+        <div class="info-item copyable" data-copy="+917049028530" title="Click to copy"
+          style="cursor:pointer; display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.05); padding: 10px 20px; border-radius: 10px; border: 1px solid rgba(168, 85, 247, 0.2); color: inherit; transition: 0.3s;"
+          onmouseover="this.style.background='rgba(168, 85, 247, 0.1)'"
+          onmouseout="this.style.background='rgba(255,255,255,0.05)'">
+          <i class="fas fa-phone" style="color: #a855f7; font-size: 18px;"></i>
+          <span>+91 7049028530</span>
+        </div>
+        <div class="info-item copyable" data-copy="rp527182@gmail.com" title="Click to copy"
+          style="cursor:pointer; display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.05); padding: 10px 20px; border-radius: 10px; border: 1px solid rgba(168, 85, 247, 0.2); color: inherit; transition: 0.3s;"
+          onmouseover="this.style.background='rgba(168, 85, 247, 0.1)'"
+          onmouseout="this.style.background='rgba(255,255,255,0.05)'">
+          <i class="fas fa-envelope" style="color: #a855f7; font-size: 18px;"></i>
+          <span>rp527182@gmail.com</span>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contact-form">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" class="btn primary"><i class="fas fa-paper-plane"></i> Send Message</button>
+      </form>
+
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/raj-pandey-aa7539289" target="_blank" class="social-icon"
+          title="LinkedIn"><i class="fab fa-linkedin" style="font-size: 24px;"></i></a>
+        <a href="https://github.com/rajpandey70" target="_blank" class="social-icon" title="GitHub"><i
+            class="fab fa-github" style="font-size: 24px;"></i></a>
+        <a href="mailto:rp527182@gmail.com" class="social-icon" title="Email"><i class="fas fa-envelope"
+            style="font-size: 24px;"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2026 Raj Pandey. Built with HTML, CSS & JS.</p>
+  </footer>
+
+  <!-- CUSTOM CURSOR -->
+  <div id="cursor-glow"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
+</body>
+
+</html>
