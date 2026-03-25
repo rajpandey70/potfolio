@@ -209,7 +209,7 @@ if (canvas) {
 }
 
 /* 3D TILT EFFECT FOR CARDS */
-const tiltCards = document.querySelectorAll(".skill-card, .project-card");
+const tiltCards = document.querySelectorAll(".skill-card, .project-card, .cert-card");
 
 tiltCards.forEach(card => {
   card.addEventListener("mousemove", (e) => {
@@ -298,7 +298,7 @@ if (cursorRing) {
     }
   });
 
-  const interactables = document.querySelectorAll("a, button, .skill-card, .project-card, .logo");
+  const interactables = document.querySelectorAll("a, button, .skill-card, .project-card, .cert-card, .logo");
   interactables.forEach(el => {
     el.addEventListener("mouseenter", () => cursorRing.classList.add("hovered"));
     el.addEventListener("mouseleave", () => cursorRing.classList.remove("hovered"));
